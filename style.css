@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300&display=swap");
+
+body {
+  margin: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+.banner {
+  max-height: 20vh;
+  object-fit: cover;
+}
+
+h1,
+h2,
+h3,
+li > a,
+.circle > p {
+  text-transform: uppercase;
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+header h3 {
+  font-style: italic;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+header > ul {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+li > a {
+  text-decoration: none;
+  color: #000;
+  padding: 0 1rem;
+}
+
+.main {
+  padding: 1rem;
+}
+
+.icon-container {
+  background-color: #333333;
+  width: 20px;
+  height: 20px;
+}
+
+.circles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.circle {
+  width: 12.5rem;
+  height: 12.5rem;
+  border-radius: 6.25rem;
+  display: flex;
+  background-size: contain;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #333;
+}
+
+.eesti {
+  background-image: url("./media/eesti.jpg");
+}
+.aasia {
+  background-image: url("./media/aasia.jpg");
+}
+.itaalia {
+  background-image: url("./media/itaalia.jpg");
+}
+
+.circle > p {
+  width: min-content;
+  text-wrap: nowrap;
+  margin: 0;
+  color: #fff;
+  opacity: 0%;
+  transition: opacity 0.3s ease-in-out;
+}
+
+div.eesti:hover #eesti-tag {
+  opacity: 100%;
+}
+div.aasia:hover #aasia-tag {
+  opacity: 100%;
+}
+div.itaalia:hover #itaalia-tag {
+  opacity: 100%;
+}
+
+footer {
+  display: flex;
+  flex-basis: row nowrap;
+  background-color: #cccccc;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.icon-container {
+  width: 3rem;
+  height: 3rem;
+  background-size: 200%;
+  background-position: center;
+  border: 1px solid #333;
+}
+
+.first-icon {
+  background-image: url("./media/avatar1.jpg");
+}
+.second-icon {
+  background-image: url("./media/avatar2.jpg");
+}
