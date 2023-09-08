@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300&display=swap");
+/*
+PRIMARY:   #EDEDED 60%
+SECONDARY: #392E29 10%
+TERNARY:   #1F1F1F 30%
+*/
 
 body {
   margin: 0;
@@ -6,6 +11,9 @@ body {
   flex-flow: column nowrap;
   justify-content: center;
   font-family: "Roboto", sans-serif;
+  background-color: #ededed;
+  color: #1f1f1f;
+  align-items: center;
 }
 
 img {
@@ -27,10 +35,26 @@ li > a,
 
 h1 {
   margin-bottom: 0;
+  font-weight: 400;
+  font-size: clamp(2rem, 2.5vw, 4rem);
+}
+
+p {
+  font-size: 1.3rem;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: clamp(1.75rem, 2vw, 3rem);
 }
 
 header h3 {
   font-style: italic;
+  color: #392e29;
+}
+
+li > a {
+  font-size: 1.5rem;
 }
 
 header {
@@ -50,16 +74,23 @@ header > ul {
 
 li > a {
   text-decoration: none;
-  color: #000;
+  color: #1f1f1f;
   padding: 0 1rem;
+  font-size: clamp(1.5rem, 1.5vw, 3rem);
 }
 
 .main {
   padding: 1rem;
 }
 
+.meist {
+  display: flex;
+  flex-flow: row nowrap;
+  width: min(80rem, 100%);
+}
+
 .icon-container {
-  background-color: #333333;
+  background-color: #1f1f1f;
   width: 20px;
   height: 20px;
 }
@@ -72,14 +103,14 @@ li > a {
 }
 
 .circle {
-  width: 12.5rem;
-  height: 12.5rem;
-  border-radius: 6.25rem;
+  width: clamp(12.5rem, 20vh, 20rem);
+  height: clamp(12.5rem, 20vh, 20rem);
+  border-radius: clamp(6.25rem, 10vh, 10rem);
   display: flex;
   background-size: contain;
   justify-content: center;
   align-items: center;
-  border: 1px solid #333;
+  border: 1px solid #1f1f1f;
 }
 
 .eesti {
@@ -96,9 +127,14 @@ li > a {
   width: min-content;
   text-wrap: nowrap;
   margin: 0;
-  color: #fff;
+  color: #ededed;
+  font-size: 1.5rem;
   opacity: 0%;
   transition: opacity 0.3s ease-in-out;
+}
+
+.circle:hover {
+  filter: saturate(20%);
 }
 
 div.eesti:hover #eesti-tag {
@@ -112,11 +148,18 @@ div.itaalia:hover #itaalia-tag {
 }
 
 footer {
-  display: flex;
-  flex-basis: row nowrap;
   background-color: #cccccc;
-  justify-content: space-between;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-content {
+  display: flex;
   padding: 1rem;
+  width: min(80rem, 100%);
+  flex-basis: row nowrap;
+  justify-content: space-between;
 }
 
 .icons {
@@ -138,4 +181,44 @@ footer {
 }
 .second-icon {
   background-image: url("./media/avatar2.jpg");
+}
+
+.divider {
+  height: 0.1rem;
+  width: 50%;
+  background-color: #392e29;
+}
+
+.meist img {
+  display: none;
+}
+
+@media only screen and (min-width: 960px) {
+  header,
+  .main,
+  .footer-content {
+    max-width: 80rem;
+  }
+
+  .banner {
+    max-height: 40vh;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .retseptid > h2 {
+    display: none;
+  }
+
+  .circles {
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .meist img {
+    display: block;
+  }
 }
